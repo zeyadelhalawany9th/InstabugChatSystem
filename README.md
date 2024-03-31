@@ -4,6 +4,20 @@
 
 #### Check http://localhost:3000/routes for all the available routes
 
+## Tools Used
+
+#### The chats_count and messages_count fields are updated every 15 minutes using Rufus Scheduler
+
+#### Indices are added to the app_token, chat_number and message_number fields along with the foreign keys for the chats and the messages tables (chats -> application_id, messages -> chat_id and application_id) to optimize the tables
+
+#### MySQL Database
+
+#### RabbitMQ and Sneakers -> To handle the queuing of inserting to the database when creating new chats and messages
+
+#### Elasticsearch -> Searching through the bodies of the messages (Partial match)
+
+#### Redis -> To keep track of the auto incrementing fields of chat_number and message_number and therefore handing the race condition
+
 ## Endpoints
 
 #### POST <http://localhost:3000/applications> -> Create a new application with app_name as a parameter -> new token is generated
@@ -28,14 +42,4 @@
 
 #### Update and Delete requests can be done using the same endpoints
 
-#### The chats_count and messages_count fields are updated every 15 minutes using Rufus Scheduler
 
-#### Indices are added to the app_token, chat_number and message_number fields along with the foreign keys for the chats and the messages tables (chats -> application_id, messages -> chat_id and application_id) to optimize the tables
-
-#### MySQL Database
-
-#### RabbitMQ and Sneakers -> To handle the queuing of inserting to the database when creating new chats and messages
-
-#### Elasticsearch -> Searching through the bodies of the messages (Partial match)
-
-#### Redis -> To keep track of the auto incrementing fields of chat_number and message_number and therefore handing the race condition
