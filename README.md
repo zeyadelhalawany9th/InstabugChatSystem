@@ -38,7 +38,7 @@
 
 #### GET <http://localhost:3000/applications/app_token/chats/chat_number/messages/message_number> -> Retrieve a specific message from a specific chat from a specific application with its number
 
-#### POST <http://localhost:3000/applications/app_token/chats/chat_number/messages/search> -> Search for a specific message from a specific chat from a specific application with a matching text as a parameter (partial match)
+#### POST <http://localhost:3000/applications/app_token/chats/chat_number/messages/search> -> Search for a specific message from a specific chat from a specific application with "text" as a parameter (partial match)
 
 #### Update and Delete requests can be done using the same endpoints
 
