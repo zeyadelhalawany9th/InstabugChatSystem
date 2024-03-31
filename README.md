@@ -20,7 +20,7 @@
 
 ## Endpoints
 
-#### POST <http://localhost:3000/applications> -> Create a new application with app_name as a parameter -> new token is generated
+#### POST <http://localhost:3000/applications> -> Create a new application with "app_name" as a parameter -> new token is generated
 
 #### GET <http://localhost:3000/applications> -> Retrieve all existing applications
 
@@ -32,7 +32,7 @@
 
 #### GET <http://localhost:3000/applications/app_token/chats/chat_number> -> Retrieve a specific chat from a specific application with its number
 
-#### POST <http://localhost:3000/applications/app_token/chats/chat_number/messages> -> Create a new message for a specific chat from a specific application with a text body as a parameter
+#### POST <http://localhost:3000/applications/app_token/chats/chat_number/messages> -> Create a new message for a specific chat from a specific application with "body" as a parameter
 
 #### GET <http://localhost:3000/applications/app_token/chats/chat_number/messages> -> Retrieve all messages from a specific chat from a specific application
 
